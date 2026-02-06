@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #020617;
+}
+
+.logo {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #020617;
+    background: #38bdf8;
+}
+
+.nav-toggle{
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger{
+    width: 28px;
+    height: 2px;
+    background: white;
+    display: block;
+    position: relative;
+}
+
+.hamburger::before, .hamburger::after{
+    content: '';
+    width: 28px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before{ top: -8px; }
+.hamburger::after{ top: 8px; }
+
+.hero {
+    text-align: center;
+    padding: 80px;
+}
+
+.hero img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.page-header {
+    text-align: center;
+    font-size: 32px;
+    margin: 30px 0;
+}
+
+.skills, .projects, .certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.skill-card, .project-card {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.skill-card{
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.skill-card.hover{ transform: scale(1.08); }
+
+.project-card{
+    transition: transform .18s ease, box-shadow .18s ease;
+    cursor: pointer;
+}
+
+.project-card:hover, .project-card.expanded{ transform: translateY(-6px) scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+
+.certificates img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.contact-form button{
+    margin-top: 10px;
+    padding: 10px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Responsive navbar */
+@media (max-width: 700px){
+    .nav-toggle{ display: block; }
+    .nav-links{ position: absolute; top: 68px; right: 20px; background: #020617; flex-direction: column; padding: 12px; border-radius: 8px; display: none; min-width: 180px; }
+    .nav-links.open{ display: flex; }
+}
