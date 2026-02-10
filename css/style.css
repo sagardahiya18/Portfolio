@@ -124,6 +124,42 @@ body {
 
 .project-card:hover, .project-card.expanded{ transform: translateY(-6px) scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
 
+.cert-item {
+    background: #020617;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform .18s ease, box-shadow .18s ease;
+    border-left: 4px solid #38bdf8;
+}
+
+.cert-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+}
+
+.cert-item h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.cert-item p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.cert-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color .18s ease;
+}
+
+.cert-link:hover {
+    color: #0ea5e9;
+}
+
 .certificates img {
     width: 100%;
     border-radius: 10px;
