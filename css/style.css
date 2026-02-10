@@ -120,9 +120,25 @@ body {
 .project-card{
     transition: transform .18s ease, box-shadow .18s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover, .project-card.expanded{ transform: translateY(-6px) scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+
+.github-btn {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color .18s ease;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #1e293b;
+}
+
+.github-btn:hover {
+    color: #0ea5e9;
+}
 
 .cert-item {
     background: #020617;
